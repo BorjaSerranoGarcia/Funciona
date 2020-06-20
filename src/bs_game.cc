@@ -147,5 +147,7 @@ void bsGame::mainLoop(bsDataBase *b_) {
 }
 
 void bsGame::finish() {
+  free(bsGameManager::getInstance()->all_elements_);
+  free(bsGameManager::getInstance()->all_elements_tag_);
   esat::WindowDestroy();
 }
